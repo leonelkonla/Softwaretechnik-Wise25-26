@@ -4,7 +4,8 @@ Dieses Repository wurde im Rahmen des Moduls **Softwaretechnik** an der BHT erst
 (Prof. Dr. Selcan Ipek-Ugay, Wintersemester 2025/26).
 
 Das Team
-- Leonel Konla Kamta, Matrikelnummer 112391
+- Leonel Konla Kamta, Matrikelnummer 112391 : 
+    Rolle : Ich kümmere mich um die Kommunikation und die Dokummetation des Projekts 
 - Leo Ogger, Matrikelnummer 100706
 - René Pettelkau, Matrikelnummer 112385
 - Patrick Rahn, Matrikelnummer 100927
