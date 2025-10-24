@@ -5,7 +5,7 @@ Dieses Repository wurde im Rahmen des Moduls **Softwaretechnik** an der BHT erst
 
 Das Team
 - Leonel Konla Kamta, Matrikelnummer 112391 : 
-    Rolle : Ich kümmere mich um die Kommunikation und die Dokummetation des Projekts und würde gerne auch als Back -oder Frontend dev beteidigen, wenn nötig ist.
+    Rolle : Ich bin für die Kommunikation und Dokumentation des Projekts zuständig und würde mich bei Bedarf auch gerne im Backend- oder Frontend-Bereich einbringen.
 - Leo Ogger, Matrikelnummer 100706
 - René Pettelkau, Matrikelnummer 112385
 - Patrick Rahn, Matrikelnummer 100927
