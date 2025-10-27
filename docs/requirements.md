@@ -28,7 +28,7 @@ Ziel ist es, Gewohnheiten sichtbar zu machen, Motivation zu fördern und langfri
 ## 2. Funktionale Anforderungen
 
 | ID | Anforderung | Priorität | Abnahmekriterium |
-
+|----|-------------|-----------|------------------|
 | F1 | Nutzer kann ein Konto anlegen (Registrierung) und sich anmelden. | A | Registrierung, Login und Logout funktionieren; Daten sicher gespeichert. |
 | F2 | Nutzer kann tägliche Werte zu Bewegung, Ernährung, Schlaf, Wasser und Erholung eingeben. | A | Eingaben validiert, gespeichert und Datum korrekt zugeordnet. |
 | F3 | System berechnet automatisch den Life-Skill-Score anhand der täglichen Eingaben. | A | Score-Berechnung liefert reproduzierbare Werte nach definierter Formel. |
