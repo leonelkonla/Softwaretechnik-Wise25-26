@@ -22,7 +22,7 @@ Bitte alle Rolle Lesen :
 - Meetings : Teilnahme an Wochen-Review und Planungs-Meeting (z. B. Dienstag 18:15 Uhr)
 
 ## Tools
-- GitHub als Versionsverwaltung  
+- GitHub als Versionsverwaltung  ss
 - Visual Studio Code / IntelliJ als IDE  
 - Teams für Kommunikation  
 - Trello / GitHub Projects für Aufgabenmanagement
@@ -37,7 +37,7 @@ Bitte alle Rolle Lesen :
 - doc :
 
 ## Pull Requests & Reviews
-- Jeder Merge in main oder feature erfolgt über einen Pull Request.
+- Jeder Merge zuerst in feature dann in main.
 - Mindestens ein Review durch ein anderes Teammitglied.
 - Checkliste:
   - Code lauffähig?
@@ -47,12 +47,12 @@ Bitte alle Rolle Lesen :
 
 ## Ordnerstruktur
 Softwaretechnik – WS 25/26
-    /docs 
-    /src – Quellcode
-    /tests – Tests
-    README.md
-    WORKFLOW.md
-    .gitignore
+/docs 
+/src – Quellcode
+/tests – Tests
+README.md
+WORKFLOW.md
+.gitignore
 
 ## Arbeitsweise
 - Wöchentliche Team-Meetings: Dienstag 18:15 Uhr  
