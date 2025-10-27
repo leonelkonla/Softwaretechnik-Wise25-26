@@ -1,23 +1,49 @@
 # Team-Workflow (Softwaretechnik – WS 25/26)
 
 ## Rollen im Team
-- Leonel Konla Kamta: Kommunikation & Dokummentation
-- ...
-- ...
-- 
-- 
+Alle Mitglieder sind gleichzeitig **Product Owner (PO)** und **Tester**.
+Bitte alle Rolle Lesen : 
+- A : Projektkoordination & Repo-Verwaltung
+- B : Requirements & Use-Cases
+- C : Software-Architektur & Datenmodell
+- D : Backend-Logik 
+- E : Frontend & UX-Design
+
+    - **Leonel Konla Kamta**: Organisation, Kommunikation mit Professorin, Abgabe, Dokummentation und GitHub - Backup: B - Falls nötig auch C, D, E
+    - **Name** : 
+    - **Name** :
+    - **Name** :
+    - **Name** :
+
+## Gemeinsame Verantwortlichkeiten
+- Product Owner (PO) : Anforderungen priorisieren (A/B/C), Backlog pflegen, Features abnehmen
+- Tester : Tests für eigene und fremde Komponenten durchführen, Bugs dokumentieren
+- Dokumentation	: Eigene Arbeit im /docs-Ordner nachführen, Screenshots, Diagramme und Protokolle ablegen
+- Meetings : Teilnahme an Wochen-Review und Planungs-Meeting (z. B. Dienstag 18:15 Uhr)
+
+## Tools
+- GitHub als Versionsverwaltung  
+- Visual Studio Code / IntelliJ als IDE  
+- Teams für Kommunikation  
+- Trello / GitHub Projects für Aufgabenmanagement
 
 ## Branching-Strategie
-- `main`: Hauptzweig des Projekts
+- `main`: Hauptzweig des Projekts(stabile Version)
 - `feature`: neue Features (kurzlebig, früh mergen)
 
 ## Commit-Konventionen
-- feat :
+- feat : Registrierung implementiert (#F1)
 - fix : 
 - doc :
 
-## Workflow-schritte
-- 
+## Pull Requests & Reviews
+- Jeder Merge in main oder feature erfolgt über einen Pull Request.
+- Mindestens ein Review durch ein anderes Teammitglied.
+- Checkliste:
+  - Code lauffähig?
+  - Namenskonventionen eingehalten?
+  - Tests vorhanden?
+  - Doku aktuell?
 
 ## Ordnerstruktur
 Softwaretechnik – WS 25/26
@@ -27,6 +53,11 @@ Softwaretechnik – WS 25/26
     README.md
     WORKFLOW.md
     .gitignore
+
+## Arbeitsweise
+- Wöchentliche Team-Meetings: Dienstag 18:15 Uhr  
+- Gemeinsame Reviews am Ende jeder Woche  
+- Änderungen werden im Git erfasst und per Pull Request geprüft
 
 ## Reflexion 
 - Was lief diese Woche gut?
