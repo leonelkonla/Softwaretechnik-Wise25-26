@@ -1,4 +1,4 @@
-# Aufgabe 2:
+# Use-Cases:
 
 ## UC-01: Nutzer registrieren  
 ---  
@@ -126,7 +126,7 @@ Alternative Abläufe:
 - sollen die Vorschläge zufällig ausgewählt werden oder anhand bestimmter Parameter (z.B. Wetter)?  
 - sollen es 2 Einblendungen sein oder sollen sie verknüpft werden? 
  
-# Aufgabe 4:
+# AI-Zuhilfenahme & Bewertung:
 a)
 Prompt: 
 "Ich entwickle eine Fitness-Tracking-App, die nicht nur die sportlichen Aktivitäten einer Person, sondern auch dessen Wohlbefinden im Allgemein umfasst. Ernährungs-Tracker-Scores sollen die Anwender motivieren, gesunde Gewohnheiten zu entwickeln, Routinen zu verbessern und eine nachhaltige Balance zwischen Körper und Geist zu finden. Ich habe folgende Use Cases identifiziert: [UC-01: Nutzer registrieren -Kurzbeschreibung:  Neuer Nutzer möchte sich im Programm registrieren]; [UC-0x: Schrittzähler - Kurzbeschreibung:  Der Nutzer möchte seine täglichen Schritte protokollieren]; [UC-1x: Kalorienzähler - Kurzbeschreibung: Der Nutzer kann seine täglichen Kalorien speichern]; [UC-xx: Tipps beim Systemstart - Kurzbeschreibung: Der Nutzer startet Programm zum ersten Mal an einem Tag]. Welche wichtigen Use Cases fehlen möglicherweise noch? Berücksichtige dabei Verwaltungsaufgaben, Fehlerszenarien und Systemwartung.“
@@ -202,5 +202,6 @@ Prompt 2:
 3. Sind Vor- und Nachbedingungen klar definiert?"
 
 Es waren mehrere Verbesserungsvorschläge der KI konstruktiv. Man hätte in der Ablaufsequenz zum Schluss ergänzen können, was das System nach der Speicherung tut, also dass es die Schrittstatistik aktualisiert und zuvor eventuell auch noch, dass die Eingabe validiert wird. Entsprechend dazu hätte man als Alternativszenario eine ungültige Eingabe aufzählen können, was eine Fehlermeldung des Systems erwirken müsste. Auch muss auf das Szenario einer Aktualisierung eines zuvor eingegebenen Wertes eingegangen werden, wobei das System vor der Bestätigung erfragen sollte, ob der vorherige Wert wirklich überschrieben werden soll. Im Ergebnis könnte man noch ergänzen, dass die Schrittzahl in die Tagesstatistik aufgenommen werden soll.
+
 Mit GenAI können knappe unausgearbeitete Vorgaben zu einem Projekt schnell in ihrer Ausführlichkeit erweitert werden. Auch die allgemeinen Elemente einer Analysephase können an den individuellen Charakter des Projektes angepasst werden, das heißt, ihnen wird eine fallbezogene Bedeutsamkeit beigemessen. Zudem können Geschäftsprozesse rund um die betrachtete App viel schneller ermittelt werden. Ausgehend von Dokumenten können bereits Grundgerüste für den Quellcode erstellt werden. AI wird auch genutzt, um die Einhaltung rechtlicher Vorgaben zu gewährleisten, sowie um die dazugehörige Dokumentation bereitzustellen. Bei der Analyse von Risiken können Fallen frühzeitig erkannt werden, zeitlicher Aufwand kann akkurater evaluiert werden und weitaus mehr wird durch Gen-AI stark vereinfacht. 
 Jedoch nicht alles, denn vor allem die zwischenmenschliche Komponente der Analysephase bleibt den Menschen überlassen. KI kann keine Konflikte zwischen Stakeholdern verhandeln. In Interviews erkennt KI keine Ironie oder Körpersprache, was oft wichtig zur Deutung der Bedürfnisse des Gegenübers ist. AI kann kein Unwissen über einen Fachbereich ersetzen, wenn fehlerhafte Beschreibungen an sie und damit in ihr Ergebnis übertragen werden.
