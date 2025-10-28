@@ -1,6 +1,6 @@
-Aufgabe 2:
+# Aufgabe 2:
 
-UC-01: Nutzer registrieren  
+## UC-01: Nutzer registrieren  
 ---  
 Kurzbeschreibung:  
 Neuer Nutzer möchte sich im Programm registrieren  
@@ -33,7 +33,7 @@ Alternative Abläufe:
  
  
  
-UC-0x: Schrittzähler  
+## UC-0x: Schrittzähler  
 ---  
 Kurzbeschreibung:  
 Der Nutzer möchte seine täglichen Schritte protokollieren  
@@ -66,7 +66,7 @@ Alternative Abläufe:
  
  
  
-UC-1x: Kalorienzähler  
+## UC-1x: Kalorienzähler  
 ---  
 Kurzbeschreibung:  
 Der Nutzer kann seine täglichen Kalorien speichern  
@@ -98,7 +98,7 @@ Alternative Abläufe:
 - sollen zusätzliche Ernährungshinweise ausgegeben werden (z.B. bei dauerhaft hohen täglichen Kalorienwerten?  
  
  
-UC-xx: Tipps beim Systemstart  
+## UC-xx: Tipps beim Systemstart  
 ---  
 Kurzbeschreibung:  
 Der Nutzer startet Programm zum ersten Mal an einem Tag  
@@ -126,12 +126,12 @@ Alternative Abläufe:
 - sollen die Vorschläge zufällig ausgewählt werden oder anhand bestimmter Parameter (z.B. Wetter)?  
 - sollen es 2 Einblendungen sein oder sollen sie verknüpft werden? 
  
-Aufgabe 4:
+# Aufgabe 4:
 a)
 Prompt: 
 "Ich entwickle eine Fitness-Tracking-App, die nicht nur die sportlichen Aktivitäten einer Person, sondern auch dessen Wohlbefinden im Allgemein umfasst. Ernährungs-Tracker-Scores sollen die Anwender motivieren, gesunde Gewohnheiten zu entwickeln, Routinen zu verbessern und eine nachhaltige Balance zwischen Körper und Geist zu finden. Ich habe folgende Use Cases identifiziert: [UC-01: Nutzer registrieren -Kurzbeschreibung:  Neuer Nutzer möchte sich im Programm registrieren]; [UC-0x: Schrittzähler - Kurzbeschreibung:  Der Nutzer möchte seine täglichen Schritte protokollieren]; [UC-1x: Kalorienzähler - Kurzbeschreibung: Der Nutzer kann seine täglichen Kalorien speichern]; [UC-xx: Tipps beim Systemstart - Kurzbeschreibung: Der Nutzer startet Programm zum ersten Mal an einem Tag]. Welche wichtigen Use Cases fehlen möglicherweise noch? Berücksichtige dabei Verwaltungsaufgaben, Fehlerszenarien und Systemwartung.“
 
-Zu übernehmende generierte Antworten: 
+## Zu übernehmende generierte Antworten: 
 UC-07: Systembenachrichtigungen & Erinnerungen senden
 ---
 Kurzbeschreibung:
