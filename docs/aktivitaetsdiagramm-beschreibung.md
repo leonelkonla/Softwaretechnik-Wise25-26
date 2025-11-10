@@ -7,3 +7,12 @@ Falls nicht wird geprüft ob das Gerät offline ist, falls nicht wird der Fehler
 Wenn die Nachricht also ankommt wird geprüft ob der Nutzer drauf reagiert. Falls ja öffnet sich die App und eine positive Nutzerreaktion wird protokolliert. 
 Falls er nicht reagiert, eine negative Reaktion.
 Ende des Prozesses.
+
+
+## Aufgabe 2: Sequenzdiagramm
+
+- Sequenzdiagramm-1
+Der User erstellt ein Konto, in der er seine Daten eingibt.Danach werden die Daten geprüft, Korrekt oder nicht und dann, nicht zurück in der Anmeldemaske. Wenn richtig, Wird das Dashbord eröffnet und alles angezeigt
+
+- Sequenzdiagramm-2
+Der User startet ein Training. das System erstellt dann eine Session und schick dann immer Benachrichtigung. Jede session wird immer gespeichert und während ein training läuf, hat der user die Möglichkeit Änderungen vorzunehmen.
