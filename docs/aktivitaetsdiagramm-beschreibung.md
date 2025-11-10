@@ -9,7 +9,7 @@ Falls er nicht reagiert, eine negative Reaktion.
 Ende des Prozesses.
 
 
-## Übungsblatt 5 - Aufgabe 2: Sequenzdiagramm
+## Übungsblatt Woche 6: - Aufgabe 2: Sequenzdiagramm
 
 - Sequenzdiagramm-1
 Der User erstellt ein Konto, in der er seine Daten eingibt.Danach werden die Daten geprüft, Korrekt oder nicht und dann, nicht zurück in der Anmeldemaske. Wenn richtig, Wird das Dashbord eröffnet und alles angezeigt
