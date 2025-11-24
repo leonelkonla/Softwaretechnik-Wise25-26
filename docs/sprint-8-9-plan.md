@@ -1,14 +1,14 @@
 1. User Story: F1 - Nutzer kann ein Konto anlegen (Registrierung) und sich anmelden.
  - Priorität: A
  - Use Cases: UC-01
- - Beteiligte Klassen: User, MainMenu, MainController
+ - Beteiligte Klassen: User, MainController
  - Geschätzter Aufwand: 1-2 Tage
 
 
 2. User Story: F2 - Nutzer kann tägliche Werte zu Bewegung, Ernährung, Schlaf, Wasser und Erholung eingeben.
  - Priorität: A
  - Use Cases: UC-1x
- - Beteiligte Klassen: User, ProfileView, Panel, Day, MainController
+ - Beteiligte Klassen: User, ProfileView, Day, MainController
  - Geschätzter Aufwand: 3-4 Tage
 
 
