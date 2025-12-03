@@ -15,6 +15,9 @@
  *   Der Controller arbeitet idealerweise mit Abstraktionen (Interfaces) für User und Views,
  *   ist aber in dieser einfachen Implementierung direkt an konkrete Typen gebunden.
  */
+package controller;
+
+import model.User;
 
 public class MainController {
     private User currentUser;

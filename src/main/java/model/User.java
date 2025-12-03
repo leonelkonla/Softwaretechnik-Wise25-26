@@ -15,7 +15,7 @@
  *   Die Klasse hängt nicht direkt von konkreten Implementierungen ab (z.B. Datenbank),
  *   sondern könnte z.B. über Interfaces oder Services mit externen Komponenten arbeiten.
  */
-
+package model;
 public class User {
     private int id;
     private String username;
@@ -25,10 +25,10 @@ public class User {
     private String sex;
     private String password;
     private Plan[] plans;
-    private Days[] days;
+    private Day[] days;
 
     // Konstruktor
-    public User(int id, String username, int age, double weight, double height, String sex, String password, Plan[] plans, Days[] days) {
+    public User(int id, String username, int age, double weight, double height, String sex, String password, Plan[] plans, Day[] days) {
         this.id = id;
         this.username = username;
         this.age = age;
@@ -40,10 +40,10 @@ public class User {
         this.days = days;
     }
   
-    // Beispielhafte Methoden delete und synchronize
+    /* Beispielhafte Methoden delete und synchronize
     public void delete(List<User> users) {
         users.remove(this);
-    }
+    }*/
   
     public void synchronize() {
         // Noch zu implementieren
@@ -82,7 +82,7 @@ public class User {
         return plans;
     }
 
-    public Days[] getDays() {
+    public Day[] getDays() {
         return days;
     }
 
@@ -90,7 +90,7 @@ public class User {
         this.plans = plans;
     }
 
-    public void setDays(Days[] days) {
+    public void setDays(Day[] days) {
         this.days = days;
     }
 }

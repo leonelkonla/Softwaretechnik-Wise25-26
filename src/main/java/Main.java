@@ -1,9 +1,14 @@
 import java.util.*;
-
-public class src {
+/*import domain.*;*/
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+public class Main{
     public static void main(String[] args) {
+
+       Application.launch(view.LoginView.class, args);
         // Day
-        day.setCaloriesIntake(2100); day.setExercisesCompleted(true);
+        /*Day.setCaloriesIntake(2100); Day.setExercisesCompleted(true);
       
         // User
         User user = new User(101, "Max", 28, 65.0, 1.70, "F", "secret",
@@ -21,5 +26,7 @@ public class src {
         // ProfileView
         ProfileView pv = new ProfileView(10, new Stage(), user, new LineChart());
         System.out.println(pv.getUser().getUsername());
+        */
+
     }
 }

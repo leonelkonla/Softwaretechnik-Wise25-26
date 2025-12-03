@@ -12,7 +12,7 @@
  * Dependency Inversion Principle:
  *   Die Klasse hängt nicht direkt von konkreten Implementierungen ab.
  */
-
+package model;
 import java.util.Date;
 
 public class Day {
@@ -21,29 +21,29 @@ public class Day {
     private int steps;
     private int caloriesIntake;
     private int caloriesBurned;
-    private Exercise[] exercises;
+    //private Exercise[] exercises;
     private boolean exercisesCompleted;
 
     // Konstruktor
-    public Day(int id, Date date, int steps, int caloriesIntake, int caloriesBurned, Exercise[] exercises, boolean exercisesCompleted) {
+    public Day(int id, Date date, int steps, int caloriesIntake, int caloriesBurned, /*Exercise[] exercises, */boolean exercisesCompleted) {
         this.id = id;
         this.date = date;
         this.steps = steps;
         this.caloriesIntake = caloriesIntake;
         this.caloriesBurned = caloriesBurned;
-        this.exercises = exercises;
+        //this.exercises = exercises;
         this.exercisesCompleted = exercisesCompleted;
     }
 
     // Geschäftslogik: Übung hinzufügen
-    public void addExercise(Exercise newExercise) {
+    /*public void addExercise(Exercise newExercise) {
         //noch zu implementieren
     }
 
     // Geschäftslogik: Übung löschen
     public void deleteExercise(Exercise deleteEx) {
         //noch zu implementieren
-    }
+    }*/
 
     // Geschäftslogik: Schritte aktualisieren
     public void updateSteps(int steps) {
@@ -71,9 +71,9 @@ public class Day {
         return caloriesBurned;
     }
 
-    public Exercise[] getExercises() {
+    /*public Exercise[] getExercises() {
         return exercises;
-    }
+    }*/
 
     public boolean isExercisesCompleted() {
         return exercisesCompleted;

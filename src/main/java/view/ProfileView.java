@@ -12,10 +12,10 @@
  * Dependency Inversion Principle:
  *   Die Klasse sollte idealerweise von Abstraktionen abhängen, hier ist sie noch direkt an konkrete Typen gebunden.
  */
-
+package view;
 public class ProfileView {
     private int id;
-    private Stage stage;
+    /*private Stage stage;
     private User user;
     private LineChart progressChart;
 
@@ -75,5 +75,5 @@ public class ProfileView {
                 ", user=" + user +
                 ", progressChart=" + progressChart +
                 '}';
-    }
+    }*/
 }
