@@ -1,10 +1,26 @@
 import java.util.*;
-/*import domain.*;*/
+import model.*;
+import data.*;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 public class Main{
     public static void main(String[] args) {
+
+        User marty = new User("Marty", "Jabbusch");
+        User leonel = new User("Leonel", "Konla");
+        User leo = new User("Leo", "Ogger");
+        User patrick = new User("Patrick", "Rahn");
+        User rene = new User("Rene", "Pettelkau");
+
+
+        DataBaseImit users = new DataBaseImit();
+        users.add(marty);
+        users.add(leonel);
+        users.add(leo);
+        users.add(patrick);
+        users.add(rene);
+
 
        Application.launch(view.LoginView.class, args);
         // Day

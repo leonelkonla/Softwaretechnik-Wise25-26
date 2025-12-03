@@ -1,19 +1,24 @@
 package controller;
 
+import data.DataBaseImit;
 import javafx.stage.Stage;
+import model.User;
 import view.*;
 import javafx.scene.Scene;
 
 public class AuthController {
 
-    private String username = "Max";
-    private String password = "Team3";
+
 
     public boolean inputVal(String inputname, String inputpw){
-        if(!inputname.equals(username) || !inputpw.equals(password)){
-            return false;
+
+        User user = DataBaseImit.instance.findUser(inputname);
+        if( user != null){
+            if(user.getPassword().equals(inputpw)){
+                return true;
+            }
         }
-        return true;
+        return false;
     }
 
     public void navigateToMainMenu(Stage stage){

@@ -27,7 +27,13 @@ public class User {
     private Plan[] plans;
     private Day[] days;
 
-    // Konstruktor
+    // Konstruktoren
+    public User(String username, String password){
+        this.username = username;
+        this.password = password;
+    }
+
+
     public User(int id, String username, int age, double weight, double height, String sex, String password, Plan[] plans, Day[] days) {
         this.id = id;
         this.username = username;
