@@ -9,11 +9,11 @@ Bitte alle Rolle Lesen :
 - D : Backend-Logik 
 - E : Frontend & UX-Design
 
-    - **Leonel Konla Kamta**: Organisation, Kommunikation mit Professorin, Abgabe, Dokummentation und GitHub - Backup: B - Falls nötig auch C, D, E
+    - **Leonel Konla Kamta**: Organisation, Kommunikation mit Professorin, Abgabe, Dokumentation und GitHub - Backup: B - Falls nötig auch C, D, E
     - **Name** : 
     - **Name** :
     - **Name** :
-    - **Name** :
+    - **René Pettelkau**: A,B
 
 ## Gemeinsame Verantwortlichkeiten
 - Product Owner (PO) : Anforderungen priorisieren (A/B/C), Backlog pflegen, Features abnehmen
