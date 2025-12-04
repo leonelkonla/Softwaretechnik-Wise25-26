@@ -1,3 +1,8 @@
+/*Implementiert das Login-Formular
+* Erbt von Application und startet erstmals die Stage
+* Wird kontrolliert von AuthController*/
+
+
 package view;
 import controller.*;
 import javafx.application.Application;
@@ -18,11 +23,15 @@ public class LoginView extends Application {
     @Override
     public void start(Stage stage){
 
+
+        //Bild für Hintergrund wird eingebunden
         Image backgroundImage = new Image(getClass().getResource("/loginimg.jpg").toExternalForm());
         ImageView backgroundView = new ImageView(backgroundImage);
 
+
         Label title = new Label("Login");
 
+        //Eingabefelder werden erzeugt
         TextField usernameField = new TextField();
         usernameField.setMaxWidth(200);
         usernameField.setPromptText("Benutzername");
@@ -34,12 +43,15 @@ public class LoginView extends Application {
         Button loginButton = new Button("Login");
         loginButton.setMaxWidth(200);
 
+        //Wird bei falscher Eingabe unter Button angezeigt
         Label falsch = new Label("Nutzername oder Passwort falsch!");
         falsch.setTextFill(RED);
         falsch.setVisible(false);
 
         AuthController controller = new AuthController();
 
+
+        //Button wird mit Mausklick Methoden des AuthController-Objektes aufrufen
         loginButton.setOnAction(e -> {
             String username = usernameField.getText();
             String password = passwordField.getText();
@@ -54,7 +66,7 @@ public class LoginView extends Application {
         });
 
 
-
+//Vertikales Layout der Formularelemente
         VBox layoutV = new VBox(10);
         layoutV.getChildren().addAll(title, usernameField, passwordField, loginButton, falsch);
         layoutV.setAlignment(Pos.CENTER);
@@ -62,6 +74,7 @@ public class LoginView extends Application {
 
         StackPane root = new StackPane();
 
+        //Elemente werden in richtiger Reihenfolge dem Rootelement untergeordnet
         root.getChildren().addAll(backgroundView, layoutV);
 
 

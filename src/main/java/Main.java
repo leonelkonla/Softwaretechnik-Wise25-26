@@ -7,13 +7,15 @@ import javafx.stage.Stage;
 public class Main{
     public static void main(String[] args) {
 
+
+        //User-Objekte werden für Pseudo-Datenbank erstellt
         User marty = new User("Marty", "Jabbusch");
         User leonel = new User("Leonel", "Konla");
         User leo = new User("Leo", "Ogger");
         User patrick = new User("Patrick", "Rahn");
         User rene = new User("Rene", "Pettelkau");
 
-
+//User werden hinzugefügt
         DataBaseImit users = new DataBaseImit();
         users.add(marty);
         users.add(leonel);
@@ -21,7 +23,7 @@ public class Main{
         users.add(patrick);
         users.add(rene);
 
-
+//Die LoginView wird gelaunched
        Application.launch(view.LoginView.class, args);
         // Day
         /*Day.setCaloriesIntake(2100); Day.setExercisesCompleted(true);
