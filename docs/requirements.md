@@ -1,6 +1,6 @@
 # Requirements-Dokument – Fitness-Tracker
 
-**Projekt**: Fitness-Tracker – Ganzheitliches Fitness- und Gesundheits-Tracking  
+**Projekt**: Fitness-Tracker 
 **Modul:** Softwaretechnik – Wintersemester 2025/26 
 **Version:** 1.0 (Woche 4)  
 **Team:** [3]  
@@ -10,7 +10,7 @@
 
 ## 1. Projektübersicht
 Die *Fitness-Tracking* unterstützt Nutzer:innen dabei, ein ausgewogenes und gesundes Leben zu führen.  
-Sie erfasst tägliche Aktivitäten in den Bereichen Bewegung, Ernährung, Schlaf, Hydration und Erholung und berechnet daraus einen ganzheitlichen **Life-Skill-Score**.  
+Sie erfasst tägliche Aktivitäten in den Bereichen Bewegung, Ernährung, Schlaf, Hydration und Erholung und berechnet daraus einen ganzheitlichen. 
 Ziel ist es, Gewohnheiten sichtbar zu machen, Motivation zu fördern und langfristig die eigene Balance zu verbessern.
 
 **Zielgruppe:**  
