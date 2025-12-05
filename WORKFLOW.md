@@ -10,7 +10,7 @@ Bitte alle Rolle Lesen :
 - E : Frontend & UX-Design
 
     - **Leonel Konla Kamta**: Organisation, Kommunikation mit Professorin, Abgabe, Dokummentation und GitHub - Backup: B - Falls nötig auch C, D, E
-    - **Patrick Rahn** : B, C, D, E(unterstützend) 
+    - **Patrick Rahn** :A(Dokumentation), B, C, D, E(unterstützend) 
     - **Name** :
     - **Name** :
     - **Name** :
