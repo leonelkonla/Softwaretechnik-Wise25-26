@@ -98,7 +98,7 @@ Alternative Abläufe:
 - sollen zusätzliche Ernährungshinweise ausgegeben werden (z.B. bei dauerhaft hohen täglichen Kalorienwerten?  
  
  
-## UC-xx: Tipps beim Systemstart  
+## UC-xx: Beim Systemstart  
 ---  
 Kurzbeschreibung:  
 Der Nutzer startet Programm zum ersten Mal an einem Tag  
