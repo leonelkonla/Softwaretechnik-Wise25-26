@@ -33,7 +33,7 @@ Alternative Abläufe:
  
  
  
-## UC-0x: Schrittzähler  
+## UC-02: Schrittzähler  
 ---  
 Kurzbeschreibung:  
 Der Nutzer möchte seine täglichen Schritte protokollieren  
@@ -66,7 +66,7 @@ Alternative Abläufe:
  
  
  
-## UC-1x: Kalorienzähler  
+## UC-03: Kalorienzähler  
 ---  
 Kurzbeschreibung:  
 Der Nutzer kann seine täglichen Kalorien speichern  
