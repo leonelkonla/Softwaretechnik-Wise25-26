@@ -31,9 +31,39 @@ Alternative Abläufe:
 - sollen bestimmte Passwortrichtlinien umgesetzt werden?  
 - soll neuer Nutzer seinen Account per Mail bestätigen? 
  
+ ## UC-02: Kalorienzähler  
+---  
+Kurzbeschreibung:  
+Der Nutzer kann seine täglichen Kalorien speichern  
+Akteur(e):  
+- Registrierter Nutzer  
+Auslöser:  
+- Nutzer hat Mahlzeit zu sich genommen   
+Vorbedingungen:  
+- Nutzer ist eingeloggt  
+- Nutzer kennt Kalorienwert seiner Mahlzeiten 
  
+Normalablauf:  
+1. Nutzer öffnet Programm  
+2. System zeigt Menu 
+3. Nutzer wählt “Kalorienzähler”   
+4. System öffnet Eingabemaske für zu speichernde Kalorienmenge   
+5. Nutzer gibt Wert ein und bestätigt Eingabe 
+6. System speichert Wert 
+7. System aktualisiert täglichen Gesamtwert
+8. System gibt an wie viel Kalorien noch angemessen sind für den Tag
  
-## UC-02: Schrittzähler  
+Ergebnis:  
+- Kalorienmenge der Mahlzeit ist gespeichert 
+ 
+Alternative Abläufe:  
+- Nutzer bricht ab → System verwirft Eingabe 
+- Nutzer möchte vergessene Werte ergänzen → Nutzer kann Tag auswählen und Daten ergänzen 
+ 
+ Offene Fragen:  
+- sollen zusätzliche Ernährungshinweise ausgegeben werden (z.B. bei dauerhaft hohen täglichen Kalorienwerten?  
+ 
+## UC-03: Schrittzähler  
 ---  
 Kurzbeschreibung:  
 Der Nutzer möchte seine täglichen Schritte protokollieren  
@@ -64,38 +94,6 @@ Alternative Abläufe:
 - sollen bestimmte Ziele gesetzt werden können?  
 - soll zu einem bestimmten Zeitpunkt an Speicherung der Schritte erinnert werden? 
  
- 
- 
-## UC-03: Kalorienzähler  
----  
-Kurzbeschreibung:  
-Der Nutzer kann seine täglichen Kalorien speichern  
-Akteur(e):  
-- Registrierter Nutzer  
-Auslöser:  
-- Nutzer hat Mahlzeit zu sich genommen   
-Vorbedingungen:  
-- Nutzer ist eingeloggt  
-- Nutzer kennt Kalorienwert seiner Mahlzeiten 
- 
-Normalablauf:  
-1. Nutzer öffnet Programm  
-2. System zeigt Startansicht 
-3. Nutzer wählt “Kalorienzähler”   
-4. System öffnet Eingabemaske für zu speichernde Kalorienmenge   
-5. Nutzer gibt Wert ein und bestätigt Eingabe 
-6. System speichert Wert 
-7. System aktualisiert täglichen Gesamtwert  
- 
-Ergebnis:  
-- Kalorienmenge der Mahlzeit ist gespeichert 
- 
-Alternative Abläufe:  
-- Nutzer bricht ab → System verwirft Eingabe 
-- Nutzer möchte vergessene Werte ergänzen → Nutzer kann Tag auswählen und Daten ergänzen 
- 
- Offene Fragen:  
-- sollen zusätzliche Ernährungshinweise ausgegeben werden (z.B. bei dauerhaft hohen täglichen Kalorienwerten?  
  
  
 ## UC-xx: Beim Systemstart  
