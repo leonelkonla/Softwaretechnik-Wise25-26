@@ -1,0 +1,156 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > UserDatabaseCSV</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.fitapp.model</a>
+</div>
+
+<h1>Coverage Summary for Class: UserDatabaseCSV (com.fitapp.model)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">UserDatabaseCSV</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (3/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    81.2%
+  </span>
+  <span class="absValue">
+    (13/16)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    92.9%
+  </span>
+  <span class="absValue">
+    (13/14)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.fitapp.model;
+&nbsp;
+&nbsp;import com.opencsv.CSVReader;
+&nbsp;import java.io.InputStream;
+&nbsp;import java.io.InputStreamReader;
+&nbsp;
+<b class="fc">&nbsp;public class UserDatabaseCSV implements UserRepository{</b>
+&nbsp;
+&nbsp;    public void validateInput(String username, String password){
+<b class="pc">&nbsp;        if (username == null || username.isBlank()) {</b>
+<b class="fc">&nbsp;            throw new EmptyFieldException(&quot;Username&quot;);</b>
+&nbsp;        }
+&nbsp;
+<b class="pc">&nbsp;        if (password == null || password.isBlank()) {</b>
+<b class="fc">&nbsp;            throw new EmptyFieldException(&quot;Password&quot;);</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        if (!validateUser(username, password)) {</b>
+&nbsp;            // never be specific, never reveal which part was wrong, just a generic message
+<b class="fc">&nbsp;            throw new InvalidCredentialsException();</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;    public boolean validateUser(String username, String password) {
+<b class="fc">&nbsp;        try (InputStream is = getClass().getResourceAsStream(&quot;/data/users.csv&quot;);</b>
+<b class="fc">&nbsp;             CSVReader reader = new CSVReader(new InputStreamReader(is))) {</b>
+&nbsp;
+&nbsp;            String[] nextLine;
+<b class="fc">&nbsp;            while ((nextLine = reader.readNext()) != null) {</b>
+<b class="pc">&nbsp;                if (nextLine[0].equals(username) &amp;&amp; nextLine[1].equals(password)) {</b>
+<b class="fc">&nbsp;                    return true;</b>
+&nbsp;                }
+&nbsp;            }
+&nbsp;        } catch (Exception e) {
+<b class="nc">&nbsp;            e.printStackTrace();</b>
+&nbsp;        }
+<b class="fc">&nbsp;        return false;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;}
+&nbsp;
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-12-18 11:12</div>
+</div>
+</body>
+</html>

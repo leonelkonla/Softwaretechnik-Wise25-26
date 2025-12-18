@@ -1,0 +1,191 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > CaloricIntakeController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.fitapp.controller</a>
+</div>
+
+<h1>Coverage Summary for Class: CaloricIntakeController (com.fitapp.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">CaloricIntakeController</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/5)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/24)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.fitapp.controller;
+&nbsp;
+&nbsp;
+&nbsp;import com.fitapp.model.CaloriesTracker;
+&nbsp;
+&nbsp;import java.io.IOException;
+&nbsp;import com.fitapp.model.NegativeCaloriesException;
+&nbsp;import com.fitapp.model.CalorieLimitExceededException;
+&nbsp;
+&nbsp;import javafx.fxml.FXMLLoader;
+&nbsp;import javafx.scene.Parent;
+&nbsp;import javafx.scene.Scene;
+&nbsp;import javafx.scene.control.Label;
+&nbsp;import javafx.scene.control.TextField;
+&nbsp;import javafx.stage.Stage;
+&nbsp;
+&nbsp;
+&nbsp;import javafx.event.ActionEvent;
+&nbsp;import javafx.fxml.FXML;
+&nbsp;
+<b class="nc">&nbsp;public class CaloricIntakeController {</b>
+&nbsp;
+&nbsp;    // instantiating CaloriesTracker object with recommended calories for an average adult
+<b class="nc">&nbsp;    private CaloriesTracker calTra = new CaloriesTracker(2000);</b>
+&nbsp;
+&nbsp;    @FXML
+&nbsp;    private TextField caloriesField;
+&nbsp;
+&nbsp;    @FXML
+&nbsp;    private TextField remainingField;
+&nbsp;
+&nbsp;    @FXML
+&nbsp;    private Label caloriesOverflowLabel;
+&nbsp;
+&nbsp;    @FXML
+&nbsp;    public void handleAddingCalories(){
+&nbsp;        try {
+<b class="nc">&nbsp;            int calories = Integer.parseInt(caloriesField.getText());</b>
+<b class="nc">&nbsp;            calTra.addCalories(calories);</b>
+&nbsp;            // observer
+<b class="nc">&nbsp;            remainingField.textProperty().bind(calTra.remainingCaloriesProperty().asString());</b>
+<b class="nc">&nbsp;            caloriesOverflowLabel.setVisible(false);</b>
+&nbsp;        } catch (NegativeCaloriesException e) {
+<b class="nc">&nbsp;            caloriesOverflowLabel.setText(&quot;Calories must be a positive number!&quot;);</b>
+<b class="nc">&nbsp;            caloriesOverflowLabel.setVisible(true);</b>
+&nbsp;
+&nbsp;        } catch (CalorieLimitExceededException e) {
+<b class="nc">&nbsp;            caloriesOverflowLabel.setText(&quot;Exceeded daily calorie limit!&quot;);</b>
+<b class="nc">&nbsp;            caloriesOverflowLabel.setVisible(true);</b>
+&nbsp;
+&nbsp;        } catch (NumberFormatException e) {
+<b class="nc">&nbsp;            caloriesOverflowLabel.setText(&quot;Please enter a valid number.&quot;);</b>
+<b class="nc">&nbsp;            caloriesOverflowLabel.setVisible(true);</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;    @FXML
+&nbsp;    public void handleReset(ActionEvent event){
+<b class="nc">&nbsp;        calTra.reset();</b>
+&nbsp;        // observer
+<b class="nc">&nbsp;        remainingField.textProperty().bind(calTra.getDailyLimit().asString());</b>
+<b class="nc">&nbsp;        caloriesField.setText(&quot;&quot;);</b>
+<b class="nc">&nbsp;        caloriesOverflowLabel.setVisible(false);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @FXML
+&nbsp;    public void handleBackToMenu(ActionEvent event){
+<b class="nc">&nbsp;        changeView(&quot;mainMenu.fxml&quot;);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;    protected void changeView(String fxmlFile) {
+&nbsp;        try {
+&nbsp;            // Load the new FXML file (next view)
+<b class="nc">&nbsp;            FXMLLoader loader = new FXMLLoader(getClass().getResource(&quot;/fxml/&quot; + fxmlFile));</b>
+<b class="nc">&nbsp;            Parent root = loader.load();</b>
+&nbsp;
+&nbsp;            // Get the current stage (window) and set the new scene
+<b class="nc">&nbsp;            Stage stage = (Stage) caloriesField.getScene().getWindow();</b>
+<b class="nc">&nbsp;            stage.setScene(new Scene(root));</b>
+<b class="nc">&nbsp;            stage.setTitle(&quot;Menu&quot;);  // Optionally set the title of the new window</b>
+<b class="nc">&nbsp;            stage.show();</b>
+&nbsp;        } catch (IOException e) {
+<b class="nc">&nbsp;            e.printStackTrace();  // Handle the exception</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-12-18 11:12</div>
+</div>
+</body>
+</html>

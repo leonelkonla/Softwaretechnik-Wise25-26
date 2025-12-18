@@ -1,0 +1,94 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > UserRepository</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.fitapp.model</a>
+</div>
+
+<h1>Coverage Summary for Class: UserRepository (com.fitapp.model)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+</tr>
+<tr>
+  <td class="name">UserRepository</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.fitapp.model;
+&nbsp;
+&nbsp;public interface UserRepository {
+&nbsp;    /**
+&nbsp;     * This interface makes sure that no matter which type of database will be used and implemented that there
+&nbsp;     * will be a method for validating the user input and authentication for the user is also handled.
+&nbsp;     * At the moment we are using a CSV file which functions as an in-memory database.
+&nbsp;     *
+&nbsp;     * Why is this useful:
+&nbsp;     * It implements the strategy pattern - define a family of behaviors, encapsulate each one and make them interchangebale
+&nbsp;     * The caller does not care how something is actually done, he/she just cares what it can do. No matter the underlying
+&nbsp;     * database (CSV, SQLite etc.) we need to validate the user input and authenticate the user. The strategies are
+&nbsp;     * interchangeable.
+&nbsp;     *
+&nbsp;     * Furthermore, it supports SOLID principles:
+&nbsp;     * Single Responsibility: each strategy does one thing
+&nbsp;     * Open/Closed: we can add a new strategy - new way to implement a database - without modifying exisiting code
+&nbsp;     * Dependency Inversion: Code details should depend on abstractions, high-level modules(business logic)
+&nbsp;     * should not depend on low-level modules(technical details)
+&nbsp;     *
+&nbsp;     * @param username
+&nbsp;     * @param password
+&nbsp;     */
+&nbsp;    public void validateInput(String username, String password);
+&nbsp;    public boolean validateUser(String username, String password);
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-12-18 11:12</div>
+</div>
+</body>
+</html>

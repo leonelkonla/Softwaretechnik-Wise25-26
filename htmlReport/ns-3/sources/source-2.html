@@ -1,0 +1,178 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > CaloriesTracker</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.fitapp.model</a>
+</div>
+
+<h1>Coverage Summary for Class: CaloriesTracker (com.fitapp.model)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">CaloriesTracker</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    66.7%
+  </span>
+  <span class="absValue">
+    (4/6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (4/4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    83.3%
+  </span>
+  <span class="absValue">
+    (10/12)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.fitapp.model;
+&nbsp;
+&nbsp;import javafx.beans.binding.IntegerBinding;
+&nbsp;import javafx.beans.property.IntegerProperty;
+&nbsp;import javafx.beans.property.SimpleIntegerProperty;
+&nbsp;
+&nbsp;public class CaloriesTracker {
+&nbsp;
+&nbsp;    /**
+&nbsp;     * This class uses Java Property classes to implement and take advantage of the observer pattern.
+&nbsp;     * The observer pattern is a design pattern in which an object, known as the subject,
+&nbsp;     * maintains a list of its dependents, known as observers, and notifies them automatically of any state changes.
+&nbsp;     * These property classes are observers under the hood.
+&nbsp;     *
+&nbsp;     * Why do we use this:
+&nbsp;     * Loose coupling: Observers are notified of state changes without needing to know anything about the subject
+&nbsp;     * This makes it easy to add, remove, or modify observers without affecting the subject
+&nbsp;     *
+&nbsp;     * The observer pattern is highly flexible and can be used in a wide range of software applications.
+&nbsp;     *
+&nbsp;     * The observer pattern establishes a one-to-many relationship. We have one subject and multiple observers.
+&nbsp;     * The subject in this scenario is the CaloriesTracker class more specifically its attributes (observable states).
+&nbsp;     * The observers are anything which listens or binds to these attributes. So if the attributes ever change they
+&nbsp;     * notify the observers.
+&nbsp;     */
+&nbsp;
+&nbsp;    // attributes
+<b class="fc">&nbsp;    private final IntegerProperty consumed = new SimpleIntegerProperty(0);</b>
+&nbsp;    private final IntegerProperty dailyLimit;
+&nbsp;
+&nbsp;    // constructor
+<b class="fc">&nbsp;    public CaloriesTracker(int dailyLimit) {</b>
+<b class="fc">&nbsp;        this.dailyLimit = new SimpleIntegerProperty(dailyLimit);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    // getters and setters
+&nbsp;
+&nbsp;
+&nbsp;    public IntegerProperty getDailyLimit() {
+<b class="fc">&nbsp;        return dailyLimit;</b>
+&nbsp;    }
+<b class="fc">&nbsp;    public IntegerProperty getConsumed(){return consumed;}</b>
+&nbsp;
+&nbsp;    // methods
+&nbsp;    public void addCalories(int calories) {
+<b class="fc">&nbsp;        if (calories &lt; 0) {</b>
+<b class="fc">&nbsp;            throw new NegativeCaloriesException();</b>
+&nbsp;        }
+<b class="fc">&nbsp;        if (consumed.get() + calories &gt; dailyLimit.get()) {</b>
+<b class="fc">&nbsp;            throw new CalorieLimitExceededException();</b>
+&nbsp;        }
+<b class="fc">&nbsp;        consumed.set(consumed.get() + calories);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void reset() {
+<b class="nc">&nbsp;        consumed.set(0);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public IntegerBinding remainingCaloriesProperty() {
+<b class="nc">&nbsp;        return (IntegerBinding) dailyLimit.subtract(consumed);</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-12-18 11:12</div>
+</div>
+</body>
+</html>
