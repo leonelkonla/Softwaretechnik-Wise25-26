@@ -11,7 +11,7 @@ Bitte alle Rolle Lesen :
 
     - **Leonel Konla Kamta**: Organisation, Kommunikation mit Professorin, Abgabe, Dokummentation und GitHub - Backup: B - Falls nötig auch C, D, E
     - **Patrick Rahn** :A(Dokumentation), B, C, D, E(unterstützend) 
-    - **Name** :
+    - **René Pettelkau** : A,B,C
     - **Name** :
     - **Name** :
 
