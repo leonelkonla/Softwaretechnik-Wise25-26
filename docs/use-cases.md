@@ -1,35 +1,34 @@
 # Use-Cases:
 
-## UC-01: Nutzer registrieren  
+## UC-01: Nutzer einloggen  
 ---  
 Kurzbeschreibung:  
-Neuer Nutzer möchte sich im Programm registrieren  
+bestehender Nutzer möchte sich im Programm einloggen  
 Akteur(e):  
-- Unregistrierter Nutzer  
+- Registrierter Nutzer  
 Auslöser:  
-- Nutzer hat Programm installiert und möchte sich registrieren  
+- Nutzer hat Programm installiert und möchte sich einloggen  
 Vorbedingungen:  
 - Nutzer hat Programm installiert  
-- Registrierung ist verfügbar  
+- Registrierung ist abgeschlossen  
  
 Normalablauf:  
 1. Nutzer öffnet Programm  
-2. System zeigt Registrierungsformular  
-3. Nutzer wählt Mailadresse und Passwort  
-4. System prüft, ob Mailadresse bereits vergeben wurde   
-5. Nutzer bestätigt Eingabe  
-6. System speichert Daten und zeigt Bestätigung  
+2. System zeigt Anmeldeformular  
+3. Nutzer gibt Nutzername und Passwort ein    
+4. Nutzer bestätigt Eingabe
+5. System prüft, ob Nutzername und Passwort korrekt sind  
+7. System leitet weiter ins Hauptmenü  
  
 Ergebnis:  
-- Nutzer ist im System registriert und kann sich anmelden  
+- Nutzer ist im System angemeldet und kann im System arbeiten  
  
 Alternative Abläufe:  
 - Nutzer bricht ab → System verwirft Eingabe  
-- Mailadresse bereits vorhanden → Nutzer kann andere angeben 
+- Nutzername oder Passwort falsch → System gibt Fehlermeldung aus 
  
  Offene Fragen:  
-- sollen bestimmte Passwortrichtlinien umgesetzt werden?  
-- soll neuer Nutzer seinen Account per Mail bestätigen? 
+- soll angezeigt werden, welche Eingabe fehlerhaft war?  
  
  ## UC-02: Kalorienzähler  
 ---  
@@ -94,7 +93,37 @@ Alternative Abläufe:
 - sollen bestimmte Ziele gesetzt werden können?  
 - soll zu einem bestimmten Zeitpunkt an Speicherung der Schritte erinnert werden? 
  
+## UC-04: Nutzer registrieren  
+---  
+Kurzbeschreibung:  
+Neuer Nutzer möchte sich im Programm registrieren  
+Akteur(e):  
+- Unregistrierter Nutzer  
+Auslöser:  
+- Nutzer hat Programm installiert und möchte sich registrieren  
+Vorbedingungen:  
+- Nutzer hat Programm installiert  
+- Registrierung ist verfügbar  
  
+Normalablauf:  
+1. Nutzer öffnet Programm  
+2. System zeigt Registrierungsformular  
+3. Nutzer wählt Mailadresse und Passwort  
+4. System prüft, ob Mailadresse bereits vergeben wurde   
+5. Nutzer bestätigt Eingabe  
+6. System speichert Daten und zeigt Bestätigung  
+ 
+Ergebnis:  
+- Nutzer ist im System registriert und kann sich anmelden  
+ 
+Alternative Abläufe:  
+- Nutzer bricht ab → System verwirft Eingabe  
+- Mailadresse bereits vorhanden → Nutzer kann andere angeben 
+ 
+ Offene Fragen:  
+- sollen bestimmte Passwortrichtlinien umgesetzt werden?  
+- soll neuer Nutzer seinen Account per Mail bestätigen? 
+  
  
 ## UC-xx: Beim Systemstart  
 ---  
