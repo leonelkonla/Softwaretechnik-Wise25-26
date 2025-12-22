@@ -1,0 +1,75 @@
+Aufgabe 1.6
+a - (b- (a n b n c)
+
+1.7
+11 einzeln 14 doppelt
+
+1.9
+1) |A x B| = 12 --> 2^12 4096
+2) |8 x 16| = 8 * 16 = 128
+3) |8 u 16| = 24
+4) P({}) = {{}}
+P({ {} }) = {	{}, {{}}    }
+P({ {},{{}} }) = {  {}, {{}}, {  {},{{}}  }, {{{}}}  }		}
+--> || = 4
+
+1.10
+4 stellen 1
+3 stellen 4
+2 stellen 3
+1 stelle 1
+--> 9
+
+1.11
+a#1 a#2 a#3 a&1 a&2 a&3
+
+1.12
+1) B x B - Z x Z x Z - B x B
+2) B x B x Z x Z x Z x B x B = 26*26*10*10*10*26*26 = 456.976.000
+
+1.13
+1) 3*5*4 = 60
+2) 3*5 + 5*4 = 35
+
+1.14
+1) 20!/5! * 15! = 15504
+2) n = 9; k = 9 --> 362.880
+
+1.15
+3 Fachbücher: k5n3 + k8n2
+4 Fachbücher: k5n4 + k8n1
+5 Fachbücher: 1
+
+1.16
+|P(M)| = 2^n, wenn n = |M|. |P(M)| ergibt sich außerdem aus der Anzahl aller Teilmengen T von M. Diese Teilmengen haben eine Mächtigkeit von 0 bis einschließlich n.
+Die Anzahl dieser Teilmengen T einer Menge M einer bestimmten Mächtigkeit m lässt sich mit dem Binomialkoeffizienten berechnen, k = |M| und n = |T|. 
+Die Summe dieser Binomialkoeffizienten aller möglichen Mächtigkeiten ist die Mächtigkeit der Summe aller möglichen Teilmengen der Potenzmenge von M, welche wiederum 2^n ist.
+
+2.1
+1) n.l., wenn x = 2
+   1/(x-2), sonst
+2) anstatt Wertevorrat N, Wertevorrat R
+3) Korrekt
+4) sqrt(1-x^2), wenn -1 <= x <= 1
+   n.l., sonst
+
+2.2
+1) [3,∞]
+2) [0,∞]
+3) [0,9]
+4) [0,∞]
+5) [0,∞]
+6) [-5,-1] oder (-7, -1]
+
+2.3
+1) Ist nicht umkehrbar, weil a und c den gleichen Funktionswert haben, und somit nicht jedem Wert f-1(x) ein eindeutiger Wert x zuzuordnen ist
+2) Ist umkehrbar: f-1(x) = a, wenn x=3; b, wenn x=4; c, wenn x=2; d, wenn x=5; e, wenn x=1
+3) Ist nicht umkehrbar, weil 6 kein Funktionswert ist, und somit nicht jedem Wert ein eindeutiger Wert x zuzuordnen ist. f-1(6) ist nicht möglich
+
+2.4
+1) Ist umkehrbar: f-1(x) = 0,5x - 1
+2) Ist umkehrbar: f-1(x) = x^2 + 1
+3) Nicht umkehrbar: f(x) = 0 existiert nicht, jedoch ist 0 im Wertebereich vorhanden, also gäbe es für die Umkehrfunktion f-1(x) keine Lösung für f-1(0). Jedoch muss jeder Wert einem anderen zuordbar sein
+4) Ist umkehrbar: f-1(x) = 1/x
+
+
