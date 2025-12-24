@@ -24,7 +24,7 @@ jobs:
     
     # 3. Cache Dependencies
     - name: Cache Maven packages
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ~/.m2/repository
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
@@ -42,7 +42,7 @@ jobs:
     # 6. Test-Report hochladen (bei Fehler)
     - name: Upload Test Results
       if: failure()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: test-results
         path: target/surefire-reports/
@@ -53,7 +53,7 @@ jobs:
     
     # 8. Artefakt speichern
     - name: Upload JAR
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: application-jar
         path: target/*.jar
