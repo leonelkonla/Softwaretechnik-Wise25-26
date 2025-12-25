@@ -33,11 +33,13 @@ jobs:
     
     # 4. Build durchführen
     - name: Build with Maven
-      run: mvn clean package
+      run: mvn clean package -DskipTests
     
-    # 5. Tests ausführen
+    # 5. Tests ausführen (mit Headless-Konfiguration)
     - name: Run Tests
       run: mvn test
+      env:
+        JAVA_TOOL_OPTIONS: -Djava.awt.headless=true -Dtestfx.robot=glass -Dtestfx.headless=true -Dprism.order=sw
     
     # 6. Test-Report hochladen (bei Fehler)
     - name: Upload Test Results
