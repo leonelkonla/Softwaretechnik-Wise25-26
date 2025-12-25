@@ -24,12 +24,12 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>21</version>
+            <version>17.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>21</version>
+            <version>17.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -64,11 +64,11 @@
             <scope>test</scope>
         </dependency>
         
-        <!-- TestFX Monocle für Headless Testing in CI -->
+        <!-- TestFX Monocle für Headless Testing in CI (Java 17 kompatibel) -->
         <dependency>
             <groupId>org.testfx</groupId>
             <artifactId>openjfx-monocle</artifactId>
-            <version>21.0.2</version>
+            <version>17.0.2+1</version>
             <scope>test</scope>
         </dependency>
         
@@ -171,4 +171,3 @@
     </build>
 
 </project>
-
