@@ -22,7 +22,13 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
     
-    # 3. Cache Dependencies
+    # 3. Xvfb installieren (Virtual Display für JavaFX)
+    - name: Setup Xvfb
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y xvfb
+    
+    # 4. Cache Dependencies
     - name: Cache Maven packages
       uses: actions/cache@v4
       with:
@@ -31,17 +37,17 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-maven-
     
-    # 4. Build durchführen
+    # 5. Build durchführen
     - name: Build with Maven
       run: mvn clean package -DskipTests
     
-    # 5. Tests ausführen (mit Headless-Konfiguration)
+    # 6. Tests ausführen (mit Xvfb für JavaFX)
     - name: Run Tests
-      run: mvn test
+      run: xvfb-run -a mvn test
       env:
         JAVA_TOOL_OPTIONS: -Djava.awt.headless=true -Dtestfx.robot=glass -Dtestfx.headless=true -Dprism.order=sw
     
-    # 6. Test-Report hochladen (bei Fehler)
+    # 7. Test-Report hochladen (bei Fehler)
     - name: Upload Test Results
       if: failure()
       uses: actions/upload-artifact@v4
@@ -49,11 +55,11 @@ jobs:
         name: test-results
         path: target/surefire-reports/
     
-    # 7. Code Coverage (optional, nur wenn JaCoCo konfiguriert ist)
+    # 8. Code Coverage
     - name: Generate Coverage Report
       run: mvn jacoco:report
     
-    # 8. Artefakt speichern
+    # 9. Artefakt speichern
     - name: Upload JAR
       uses: actions/upload-artifact@v4
       with:
