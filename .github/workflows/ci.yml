@@ -1,11 +1,9 @@
 name: CI/CD Pipeline
-
 on:
   push:
     branches: [ main, develop ]
   pull_request:
     branches: [ main ]
-
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
@@ -16,10 +14,10 @@ jobs:
       uses: actions/checkout@v4
     
     # 2. Java Setup
-    - name: Setup JDK 17
+    - name: Setup JDK 21
       uses: actions/setup-java@v4
       with:
-        java-version: '17'
+        java-version: '21'
         distribution: 'temurin'
     
     # 3. Cache Dependencies
