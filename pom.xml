@@ -19,6 +19,11 @@
             <url>https://jitpack.io</url>
         </repository>
     </repositories>
+    <scm>
+             <connection>scm:git:https://github.com/leonelkonla/Softwaretechnik-Wise25-26.git</connection>
+             <developerConnection>scm:git:https://github.com/leonelkonla/Softwaretechnik-Wise25-26.git</developerConnection>
+             <url>https://github.com/leonelkonla/Softwaretechnik-Wise25-26</url>
+    </scm>
     <dependencies>
         <!-- JavaFX dependencies -->
         <dependency>
@@ -178,16 +183,11 @@
                      </goals>
                  </execution>
              </executions>
-             <configuration>
-                 <doCheck>false</doCheck>
-                 <doUpdate>false</doUpdate>
-                 <shortRevisionLength>7</shortRevisionLength>
-                 <revisionOnScmFailure>unknown</revisionOnScmFailure>
-             </configuration>
          </plugin>
         </plugins>
     </build>
 
 </project>
+
 
 
