@@ -12,8 +12,6 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- Default buildNumber (wird von CI mit commit-count überschrieben) -->
-        <buildNumber>0</buildNumber>
     </properties>
     <repositories>
         <repository>
@@ -22,7 +20,7 @@
         </repository>
     </repositories>
     <dependencies>
-        <!-- (deine Dependencies unverändert) -->
+        <!-- JavaFX dependencies -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
@@ -50,24 +48,30 @@
             <artifactId>opencsv</artifactId>
             <version>5.7.1</version>
         </dependency>
+        <!-- TestFX Core Dependency -->
         <dependency>
             <groupId>org.testfx</groupId>
             <artifactId>testfx-core</artifactId>
             <version>4.0.17</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- TestFX JUnit5 Dependency -->
         <dependency>
             <groupId>org.testfx</groupId>
             <artifactId>testfx-junit5</artifactId>
             <version>4.0.17</version>
             <scope>test</scope>
         </dependency>
+        
+        <!-- TestFX Monocle für Headless Testing in CI -->
         <dependency>
             <groupId>org.testfx</groupId>
             <artifactId>openjfx-monocle</artifactId>
             <version>21.0.2</version>
             <scope>test</scope>
         </dependency>
+        
         <dependency>
             <groupId>jdepend</groupId>
             <artifactId>jdepend</artifactId>
@@ -83,28 +87,17 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
             </plugin>
-
-            <!-- Final-Name so dass artifactName die Build-Nummer enthält -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.3.0</version>
-                <configuration>
-                    <finalName>${project.artifactId}-${project.version}-${buildNumber}</finalName>
-                </configuration>
-            </plugin>
-
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.7</version>
                 <configuration>
-                    <mainClass>com.fitapp.Main</mainClass>
+                    <mainClass>com.fitapp.Main</mainClass> <!-- Main class -->
                 </configuration>
                 <executions>
                     <execution>
                         <goals>
-                            <goal>run</goal>
+                            <goal>run</goal> <!-- Use javafx:run to run your app -->
                         </goals>
                     </execution>
                 </executions>
@@ -114,12 +107,15 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.11</version>
                 <executions>
+                    <!-- Attach JaCoCo agent to test JVM -->
                     <execution>
                         <id>prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
+
+                    <!-- Generate coverage report after tests -->
                     <execution>
                         <id>report</id>
                         <phase>verify</phase>
@@ -129,11 +125,10 @@
                     </execution>
                 </executions>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>3.2.2</version>
+                <version>3.2.2</version> <!-- latest stable -->
                 <configuration>
                     <configLocation>google_checks.xml</configLocation>
                     <consoleOutput>true</consoleOutput>
@@ -149,7 +144,6 @@
                     </execution>
                 </executions>
             </plugin>
-
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -157,7 +151,7 @@
                 <executions>
                     <execution>
                         <id>run-jdepend</id>
-                        <phase>verify</phase>
+                        <phase>verify</phase> <!-- runs after tests -->
                         <goals>
                             <goal>java</goal>
                         </goals>
@@ -172,22 +166,19 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <!-- Optional: buildnumber plugin (fällt zurück, falls CI bereits BUILD_NUMBER setzt) -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>buildnumber-maven-plugin</artifactId>
-                <version>3.2.0</version>
-                <executions>
-                    <execution>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>create</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
+         <plugin>
+             <groupId>org.codehaus.mojo</groupId>
+             <artifactId>buildnumber-maven-plugin</artifactId>
+             <version>3.2.0</version>
+             <executions>
+                 <execution>
+                     <phase>validate</phase>
+                     <goals>
+                         <goal>create</goal>
+                     </goals>
+                 </execution>
+             </executions>
+         </plugin>
         </plugins>
     </build>
 
