@@ -178,8 +178,14 @@
                      </goals>
                  </execution>
              </executions>
+             <configuration>
+                 <doCheck>false</doCheck>
+                 <doUpdate>false</doUpdate>
+                 <revisionOnScmFailure>unknown</revisionOnScmFailure>
+             </configuration>
          </plugin>
         </plugins>
     </build>
 
 </project>
+
