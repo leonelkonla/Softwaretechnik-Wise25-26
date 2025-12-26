@@ -47,25 +47,38 @@ jobs:
         name: test-results
         path: target/surefire-reports/
     
-    # 7. Code Coverage (optional, nur wenn JaCoCo konfiguriert ist)
+    # 7. Code Coverage
     - name: Generate Coverage Report
       run: mvn jacoco:report
     
-    # 8. Artefakt speichern
+    # 8. Quality Gate - Coverage Check
+    - name: Quality Gate - Coverage Check
+      run: |
+        # JaCoCo CSV-Report parsen (zuverlässiger als HTML)
+        if [ -f target/site/jacoco/jacoco.csv ]; then
+          COVERAGE=$(awk -F',' 'NR>1 {missed+=$4; covered+=$5} END {if(missed+covered>0) printf "%.0f", (covered/(missed+covered))*100; else print "0"}' target/site/jacoco/jacoco.csv)
+          echo "Code Coverage: $COVERAGE%"
+          if [ "$COVERAGE" -lt 50 ]; then
+            echo "❌ Coverage unter 50% - Build fehlgeschlagen!"
+            exit 1
+          fi
+          echo "✅ Coverage OK: $COVERAGE%"
+        else
+          echo "⚠️  Kein JaCoCo-Report gefunden!"
+          exit 1
+        fi
+    
+    # 9. Coverage Report hochladen
+    - name: Upload Coverage Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: coverage-report
+        path: target/site/jacoco/
+    
+    # 10. Artefakt speichern
     - name: Upload JAR
       uses: actions/upload-artifact@v4
       with:
         name: application-jar
         path: target/*.jar
-        
-    - name: Quality Gate - Coverage Check
-      run: |
-        ./gradlew jacocoTestReport
-        COVERAGE=$(grep -oP 'Total.*?(\d+)%' build/reports/jacoco/test/html/index.html | grep -oP '\d+' | head -1)
-        echo "Code Coverage: $COVERAGE%"
-        if [ "$COVERAGE" -lt 50 ]; then
-          echo "❌ Coverage unter 50% - Build fehlgeschlagen!"
-          exit 1
-        fi
-        echo "✅ Coverage OK: $COVERAGE%"
-        
+          
