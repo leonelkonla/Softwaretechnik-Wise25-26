@@ -181,6 +181,7 @@
              <configuration>
                  <doCheck>false</doCheck>
                  <doUpdate>false</doUpdate>
+                 <shortRevisionLength>7</shortRevisionLength>
                  <revisionOnScmFailure>unknown</revisionOnScmFailure>
              </configuration>
          </plugin>
@@ -188,4 +189,5 @@
     </build>
 
 </project>
+
 
