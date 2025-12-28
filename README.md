@@ -9,8 +9,7 @@
 
 
 
-Dieses Repository wurde im Rahmen des Moduls **Softwaretechnik** an der BHT erstellt  
-(Prof. Dr. Selcan Ipek-Ugay, Wintersemester 2025/26).
+### Dieses Repository wurde im Rahmen des Moduls **Softwaretechnik** an der BHT erstellt (Prof. Dr. Selcan Ipek-Ugay, Wintersemester 2025/26).
 
 ## Das Team
 - Leonel Konla Kamta, Matrikelnummer 112391
