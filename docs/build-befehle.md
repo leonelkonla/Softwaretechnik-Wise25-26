@@ -20,6 +20,6 @@ mvn package
 ### Anwendung ausführen
 mvn javafx:run
 
-
+## Build-Zeiten
 Clean Build: ca. 10 Sekunden
 Nur Tests: ca. 15 Sekunden
