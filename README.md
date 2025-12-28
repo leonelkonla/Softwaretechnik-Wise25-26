@@ -1,14 +1,13 @@
 # FitnessTracker
 
+Dieses Repository wurde im Rahmen des Moduls **Softwaretechnik** an der BHT erstellt (Prof. Dr. Selcan Ipek-Ugay, Wintersemester 2025/26).
+
 ![CI/CD](https://github.com/leonelkonla/Softwaretechnik-Wise25-26/actions/workflows/ci.yml/badge.svg)
 
 ## Status
 - Build: ✅ Passing
 - Tests: ✅ 7/7 passed
 - Coverage: >50%
-
-## Information
-Dieses Repository wurde im Rahmen des Moduls **Softwaretechnik** an der BHT erstellt (Prof. Dr. Selcan Ipek-Ugay, Wintersemester 2025/26).
 
 ## Das Team
 - Leonel Konla Kamta, Matrikelnummer 112391
