@@ -26,3 +26,19 @@
 ## Links
 - Pipeline-Runs: https://github.com/leonelkonla/Softwaretechnik-Wise25-26/actions
 - Letzter erfolgreicher Build: https://github.com/leonelkonla/Softwaretechnik-Wise25-26/actions/runs/20525350132
+
+## Erweiterte Features
+
+### Automatische Versionierung
+- Format: 1.0.[Git-Commit-Count]
+- Beispiel: 1.0.42
+- Build-Info-Datei wird generiert
+
+### Quality Gates
+- ✅ Code Coverage muss ≥ 50% sein
+- ✅ Alle Tests müssen bestehen
+- ✅ Code muss kompilieren
+
+### Branch-Strategie
+- `main`: Stable releases
+- `feature/*`: Feature branches werden getestet
