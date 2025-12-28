@@ -7,9 +7,8 @@
 - Tests: ✅ 7/7 passed
 - Coverage: >50%
 
-
-
-### Dieses Repository wurde im Rahmen des Moduls **Softwaretechnik** an der BHT erstellt (Prof. Dr. Selcan Ipek-Ugay, Wintersemester 2025/26).
+## Information
+Dieses Repository wurde im Rahmen des Moduls **Softwaretechnik** an der BHT erstellt (Prof. Dr. Selcan Ipek-Ugay, Wintersemester 2025/26).
 
 ## Das Team
 - Leonel Konla Kamta, Matrikelnummer 112391
