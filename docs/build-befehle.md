@@ -2,6 +2,7 @@
 
 ## Setup
 java -version
+
 mvn -version
 git clone https://github.com/leonelkonla/Softwaretechnik-Wise25-26
 cd softwaretechnik-projekt
