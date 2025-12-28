@@ -1,4 +1,4 @@
-#Build-Befehle Übersicht
+# Build-Befehle Übersicht
 
 ## Setup
 java -version
