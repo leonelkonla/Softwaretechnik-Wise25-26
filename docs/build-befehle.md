@@ -4,7 +4,9 @@
 java -version
 
 mvn -version
+
 git clone https://github.com/leonelkonla/Softwaretechnik-Wise25-26
+
 cd softwaretechnik-projekt
 
 ## Standard-Workflows
@@ -23,4 +25,5 @@ mvn javafx:run
 
 ## Build-Zeiten
 Clean Build: ca. 10 Sekunden
+
 Nur Tests: ca. 15 Sekunden
