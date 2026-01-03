@@ -1,6 +1,7 @@
 package com.fitapp;
 
 import com.fitapp.view.LoginView;
+
 import javafx.application.Application;
 
 public class Main {
