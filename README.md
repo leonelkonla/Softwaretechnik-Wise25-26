@@ -24,6 +24,6 @@ und Nutzer:innen motiviert, ihre Ziele zu erreichen.
 
 ## Projektstruktur
 - `docs/` → Dokumentation  
-- `src/` → Quellcode  
-- `tests/` → Testdateien
+- `src/main/` → Application Code
+- `src/test/` → Test Code
   
