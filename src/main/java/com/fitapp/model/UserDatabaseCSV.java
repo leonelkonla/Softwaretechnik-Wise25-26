@@ -1,8 +1,9 @@
 package com.fitapp.model;
 
-import com.opencsv.CSVReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+
+import com.opencsv.CSVReader;
 
 public class UserDatabaseCSV implements UserRepository{
 
